@@ -30,5 +30,12 @@ https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
 5. Feature Engineering
 6. Pipeline Integration
 
-## Status
-Stage 1 — Project Setup & Data Loading
+## Current Status
+
+✅ Stage 1 — Project Setup & Data Loading  
+✅ Stage 2 — Exploratory Data Analysis  
+✅ Stage 3 — Data Cleaning  
+🚧 Stage 4 — Feature Preprocessing (Next)
+
+Current focus:
+Building preprocessing pipelines using scikit-learn.
