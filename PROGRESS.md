@@ -90,18 +90,63 @@ Status: Completed
 
 ---
 
-## Stage 4: Feature Preprocessing ⏸️
-Status: Not Started
+## Stage 4: Feature Preprocessing 🚧
 
-### Upcoming Topics
-- Train/test split
-- Data leakage prevention
-- Encoding categorical features
-- Feature scaling
-- Scikit-learn pipelines
-- ColumnTransformer
+Status: In Progress
 
----
+### Tasks Completed
+
+* Created train/test split
+* Separated features (X) and target (y)
+* Identified numerical columns
+* Identified categorical columns
+* Applied OneHotEncoder to categorical features
+* Applied StandardScaler to numerical features
+* Created ColumnTransformer for unified preprocessing
+* Successfully generated processed training and test datasets
+* Learned fit() vs transform() workflow
+
+### Key Learnings
+
+* Test data must never be used during fitting
+* Data leakage can significantly inflate model performance
+* OneHotEncoder converts categorical values into machine-readable features
+* StandardScaler normalizes numerical feature scales
+* ColumnTransformer applies different transformations to different feature groups
+* fit() learns preprocessing rules
+* transform() applies learned rules
+* New production data should only be transformed, never fitted
+
+### Important Concepts Understood
+
+* Train/Test Split
+* Data Leakage
+* OneHotEncoder
+* StandardScaler
+* ColumnTransformer
+* Pipeline Architecture
+* Numerical vs Categorical Features
+* Production Inference Workflow
+
+### Example Results
+
+* X_test_processed.shape = (292, 265)
+
+### Current Understanding
+
+A new house received after deployment:
+
+1. Is NOT merged with training data
+2. Is transformed using the fitted preprocessor
+3. Is passed to the model for prediction
+4. May later be included during periodic retraining
+
+### Remaining Work
+
+* Build complete sklearn Pipeline
+* Connect preprocessing and model into a single workflow
+* Commit Stage 4 implementation
+* Push changes to GitHub
 
 ## Stage 5: Feature Engineering ⏸️
 Status: Not Started
