@@ -46,3 +46,39 @@ def total_rooms(df):
         + df["TotalBathrooms"]
     )    
     return df
+
+def create_remodeled(df):
+    """
+    1 if house was remodeled,
+    0 otherwise.
+    """
+
+    df["Remodeled"] = (
+        df["YearBuilt"] != df["YearRemodAdd"]
+    ).astype(int)
+
+    return df
+
+def create_years_since_remodel(df):
+    """
+    Years between remodel and sale.
+    """
+
+    df["YearsSinceRemodel"] = (
+        df["YrSold"] -
+        df["YearRemodAdd"]
+    )
+
+    return df
+
+def create_total_rooms(df):
+    """
+    Total usable rooms.
+    """
+
+    df["TotalRooms"] = (
+        df["TotRmsAbvGrd"]
+        + df["TotalBathrooms"]
+    )
+
+    return df
