@@ -146,10 +146,29 @@ A new house received after deployment:
 
 ### Remaining Work
 --
-## Stage 5: Feature Engineering ⏸️
-Status: Not Started
+## Stage 5: Feature Engineering ✅
+Status: Completed
 
----
+### Features Created
+- HouseAge
+- TotalBathrooms
+- TotalSquareFeet
+- TotalPorchArea
+- Remodeled
+- YearsSinceRemodel
+- TotalRooms
+
+### Key Findings
+- TotalSquareFeet became the 2nd strongest feature in the dataset
+- Engineered features can outperform original features
+- Feature engineering requires domain reasoning
+- Correlation analysis helps evaluate feature usefulness
+
+### Key Learnings
+- Difference between preprocessing and feature engineering
+- Creating meaningful aggregate features
+- Avoiding target leakage
+- Evaluating engineered features using correlation
 
 ## Stage 6: Pipeline Integration ⏸️
 Status: Not Started
