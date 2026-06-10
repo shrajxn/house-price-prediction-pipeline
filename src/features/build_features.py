@@ -25,7 +25,7 @@ def create_total_square_feet(df):
     df["TotalSquareFeet"] = df["GrLivArea"] + df["TotalBsmtSF"]
     return df
 
-def create_total_poach_area(df):
+def create_total_porch_area(df):
     """Create total porch area feature by 
     combining all porch area features.
     """
